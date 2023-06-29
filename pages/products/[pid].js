@@ -9,7 +9,6 @@ async function getData() {
 }
 
 export async function getStaticProps(context) {
-  console.log("RB:: Re-validationg");
   const { params } = context;
   const data = await getData();
   const product = data.products.find((p) => p.id === params.pid);
